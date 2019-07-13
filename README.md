@@ -1,5 +1,6 @@
 # INSTRUCTIONS:
-Install Dependencies by running npm intall
+Install Dependencies by running 
+### `npm install`
 
 ## Available Scripts
 
