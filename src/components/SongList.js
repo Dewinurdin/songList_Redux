@@ -1,15 +1,22 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { selectSong } from '../actions';
 
 class SongList extends React.Component {
   renderList (){
     // console.log(this.props);
+    // map song props from redux
     return this.props.songs.map((song) => {
+      // returning jsx mapping function
       return (
         <div className="item" key={song.title}>
           <div className="right floated content">
-            <button className="ui button primary">
-              Select
+            <button 
+              className="ui button primary"
+              // run selectSong action creator and iterating song that is clicked
+              onClick={() => this.props.selectSong(song)}
+            >
+                Select
             </button>
           </div>
           <div className="content">{song.title}</div>
@@ -18,6 +25,7 @@ class SongList extends React.Component {
     });
   }
     render(){
+      // console.log(this.props);
       return <div className="ui divided list">{this.renderList()}</div>
   }
 };
@@ -30,4 +38,6 @@ const mapStateToProps = state => {
 }
 
 // connect()(SongList) ==> connect function that return SongList function
-export default connect(mapStateToProps)(SongList);
+// selectSong argument is taken from selectSong action creator and send it dispatch
+// then pass it to our render method as props
+export default connect(mapStateToProps, { selectSong })(SongList);
