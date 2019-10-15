@@ -21,7 +21,7 @@ const selectedSongReducer = (selectedSong = null, action) => {
   return selectedSong;
 };
 
-// Export both reducers using combineReducers function from  Redux
+// Export both reducers using combineReducers functions from  Redux
 export default combineReducers({
   songs: songsReducer, 
   selectedSong: selectedSongReducer

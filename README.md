@@ -1,3 +1,4 @@
+Simple React App with Redux to show Song List. Once click on Select button, it'll show song details.
 # INSTRUCTIONS:
 Install Dependencies by running 
 ### `npm install`

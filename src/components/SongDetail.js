@@ -2,7 +2,6 @@ import React from 'react'
 import { connect } from 'react-redux';
 
 const SongDetail = ({ song }) => {
-  // console.log(props);
   // if the selected song is equal to null (initial state)
   if (!song) {
     return <div>Select a song</div>
